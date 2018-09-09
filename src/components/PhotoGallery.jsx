@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ImageCard from "./ImageCard.jsx";
 
 class PhotoGallery extends Component {
   constructor(props) {
@@ -10,8 +11,13 @@ class PhotoGallery extends Component {
   }
 
   render() {
+    const { images } = this.state;
     console.log(this.state.images);
-    return <div>Hello!!!</div>;
+    return (
+      <div>
+        {images.map(image => <ImageCard key={image._id} image={image} />)}
+      </div>
+    );
   }
 }
 
