@@ -41,7 +41,7 @@ class PhotoGallery extends Component {
           Prev
         </button>
         <div className="col">
-          <div className="images-slider active-slide">
+          <div className={`images-slider active-slide-${image.index}`}>
             <div
               className="images-slider-wrapper"
               style={{
