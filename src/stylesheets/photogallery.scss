@@ -35,8 +35,8 @@
   opacity: 0.5;
   background-color: black;
   color: white;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .images-slider-wrapper {
@@ -105,12 +105,12 @@ $i: 0;
   max-width: 400px;
   margin: 0 auto;
 
-  // boder for active property
+  // boder for active image
   &:after {
     content: "";
     display: block;
-    width: 515px;
-    height: 350px;
+    width: 500px;
+    height: 340px;
     outline: 3px solid black;
     position: absolute;
     top: 0;
@@ -121,13 +121,24 @@ $i: 0;
 .next {
   cursor: pointer;
   position: absolute;
-  right: 400px;
-  font-size: 40px;
+  right: 410px;
+  font-size: 30px;
 }
 
 .prev {
   cursor: pointer;
   position: relative;
   left: -198px;
-  font-size: 40px;
+  font-size: 30px;
+}
+
+.number {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.5;
+  background-color: black;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
 }

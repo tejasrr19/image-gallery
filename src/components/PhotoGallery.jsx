@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ImageCard from "./ImageCard.jsx";
 import "../stylesheets/photogallery.scss";
+import { Button, Glyphicon } from "react-bootstrap";
 
 class PhotoGallery extends Component {
   constructor(props) {
@@ -13,17 +14,23 @@ class PhotoGallery extends Component {
   }
 
   nextImage = () => {
-    const newIndex = this.state.image.index + 1;
-    this.setState({
-      image: this.state.images[newIndex]
-    });
+    const { image, images } = this.state;
+    if (image.index !== images.length - 1) {
+      const newIndex = this.state.image.index + 1;
+      this.setState({
+        image: this.state.images[newIndex]
+      });
+    }
   };
 
   prevImage = () => {
-    const newIndex = this.state.image.index - 1;
-    this.setState({
-      image: this.state.images[newIndex]
-    });
+    const { image, images } = this.state;
+    if (image.index !== 0) {
+      const newIndex = this.state.image.index - 1;
+      this.setState({
+        image: this.state.images[newIndex]
+      });
+    }
   };
 
   render() {
@@ -47,7 +54,11 @@ class PhotoGallery extends Component {
               }}
             >
               {images.map(image => (
-                <ImageCard key={image.index} image={image} />
+                <ImageCard
+                  key={image.index}
+                  image={image}
+                  length={images.length}
+                />
               ))}
             </div>
           </div>
@@ -58,13 +69,3 @@ class PhotoGallery extends Component {
 }
 
 export default PhotoGallery;
-
-// <button
-//   onClick={() => this.nextImage()}
-//   disabled={image.index === this.state.images.length - 1}
-// >
-//   Next
-// </button>
-// <button onClick={() => this.prevImage()} disabled={image.index === 0}>
-//   Prev
-// </button>
