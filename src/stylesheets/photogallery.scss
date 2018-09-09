@@ -1,13 +1,15 @@
 /* #region Card */
 /* Card */
 .image-card {
+  position: relative;
   border: 3px #f3f3f3 solid;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
   transition: all 0.3s linear;
   cursor: pointer;
   background-color: #f3f3f3;
-  padding: 10px;
-  max-width: 220px;
+  padding: 5px;
+  min-width: 700px;
+  max-width: 700px;
   text-align: left;
   margin: 0 auto;
   &:hover {
@@ -15,71 +17,61 @@
     border-color: #f3f3f3;
   }
   img {
-    max-width: calc(100%);
+    width: calc(100%);
+    height: calc(100%);
     margin: 0 auto;
     display: block;
   }
-  .index {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: #fff;
-    line-height: 20px;
-    font-size: 14px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    padding: 0 10px;
-  }
-  .price {
-    margin: 0;
-    padding: 10px 0;
-    font-weight: bold;
-  }
-  .details {
-    position: relative;
-  }
 }
 
-/* #endregion */
+.caption-card {
+  position: relative;
+}
 
-/* #region cards slider */
+.caption {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  opacity: 0.5;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .images-slider-wrapper {
   display: flex;
   position: absolute;
   transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
   .image-card {
+    position: relative;
     flex: 1;
-    min-width: 200px;
-    opacity: 0.7;
-    transform: scale(0.8);
+    min-width: 500px;
+    min-height: 330px;
+    opacity: 0.8;
+    transform: scale(0.7);
     box-shadow: none;
     background-color: white;
     border-color: white;
     transition: opacity 300ms linear, border-color 300ms linear,
       background-color 300ms linear,
       transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    .details {
-      opacity: 0;
-      transition: opacity 150ms linear;
-    }
   }
 }
 
 $i: 0;
 @for $i from 0 through 29 {
   .images-slider.active-slide-#{$i} #image-card-#{$i} {
+    position: relative;
     opacity: 1;
     transform: scale(1);
     background-color: #f3f3f3;
     border-color: #f3f3f3;
-    .details {
-      opacity: 1;
-    }
   }
 }
 
 .col {
-  height: 264px;
+  height: 500px;
   position: relative;
   &:before,
   &:after {
@@ -110,16 +102,16 @@ $i: 0;
 
 .images-slider {
   position: relative;
-  max-width: 226px;
+  max-width: 400px;
   margin: 0 auto;
 
   // boder for active property
   &:after {
     content: "";
     display: block;
-    width: 100%;
-    height: 264px;
-    outline: 5px solid #61dafb;
+    width: 515px;
+    height: 350px;
+    outline: 3px solid black;
     position: absolute;
     top: 0;
     left: 0;
