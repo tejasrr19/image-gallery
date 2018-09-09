@@ -1,16 +1,16 @@
 const data = [
   {
-    _id: 1,
+    index: 0,
     url: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property01.jpg",
     caption: "Winter Home"
   },
   {
-    _id: 2,
+    index: 1,
     url: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property01.jpg",
     caption: "Summer Home"
   },
   {
-    _id: 3,
+    index: 2,
     url: "https://ihatetomatoes.net/demos/_rw/01-real-estate/tn_property01.jpg",
     caption: "Spring Home"
   }

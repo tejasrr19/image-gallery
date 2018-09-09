@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "../stylesheets/imagecard.scss";
 
 const ImageCard = ({ image }) => {
   const { _id, url, caption } = image;
