@@ -117,4 +117,17 @@ $i: 0;
     left: 0;
   }
 }
-/* #endregion */
+
+.next {
+  cursor: pointer;
+  position: absolute;
+  right: 400px;
+  font-size: 40px;
+}
+
+.prev {
+  cursor: pointer;
+  position: relative;
+  left: -198px;
+  font-size: 40px;
+}

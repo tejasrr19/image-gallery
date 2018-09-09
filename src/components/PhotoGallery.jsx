@@ -31,15 +31,12 @@ class PhotoGallery extends Component {
     console.log(this.state.images);
     return (
       <div className="photo-gallery">
-        <button
-          onClick={() => this.nextImage()}
-          disabled={image.index === this.state.images.length - 1}
-        >
-          Next
-        </button>
-        <button onClick={() => this.prevImage()} disabled={image.index === 0}>
-          Prev
-        </button>
+        <a className="prev" onClick={() => this.prevImage()}>
+          &#10094;
+        </a>
+        <a className="next" onClick={() => this.nextImage()}>
+          &#10095;
+        </a>
         <div className="col">
           <div className={`images-slider active-slide-${image.index}`}>
             <div
@@ -61,3 +58,13 @@ class PhotoGallery extends Component {
 }
 
 export default PhotoGallery;
+
+// <button
+//   onClick={() => this.nextImage()}
+//   disabled={image.index === this.state.images.length - 1}
+// >
+//   Next
+// </button>
+// <button onClick={() => this.prevImage()} disabled={image.index === 0}>
+//   Prev
+// </button>
