@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ImageCard from "./ImageCard.jsx";
-import "../stylesheets/photogallery.scss";
+import "../stylesheets/photo-gallery.scss";
 import { Button, Glyphicon } from "react-bootstrap";
 
 class PhotoGallery extends Component {

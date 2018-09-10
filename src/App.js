@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="page">
         <section>
-          <h1>A Simple Photo Gallery Component</h1>
+          <h1> A Simple Photo Gallery Component</h1>
         </section>
         <PhotoGallery data={imageData} />
       </div>
