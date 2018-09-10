@@ -72,6 +72,7 @@
   }
 }
 
+// set opacity of active image card
 $i: 0;
 @for $i from 0 through 29 {
   .images-slider.active-slide-#{$i} #image-card-#{$i} {
