@@ -12,3 +12,8 @@ $ npm start
 ```
 
 Navigate to `http://localhost:3000` in the browser.
+
+```
+NODE VERSION : 7.6.0
+NPM VERSION : 4.1.2
+```
